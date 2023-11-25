@@ -1,12 +1,12 @@
-Material proxies code to change the frame of the radar. 
-
-Idea: Set max height coordinates to $pos_max_y, player position will be clamped, divided and turned into a intenger value so used to set texture frame. 
-
-The value of player position is get in PlayerPosition, stored at $pos, $pos[2] are clamped, stored at $pos_rsv and this custom var is divided by $pos_max_y. After this turned into a intenger, and if the result its less from defined, the value is a float < 1 ( 0.83... ), if higher will be = or > 1 ( 1.25 etc... ) both values will turn into a int number, so or 1 or 0 on my teorical. And this is used to set the frame of animated texture in Int proxie ( resultVar "$frame" ).
-
-Lower frame 0, higher 1. 
-
-VMT Code:
+// Material proxies code to change the frame of the radar. 
+// 
+// Idea: Set max height coordinates to $pos_max_y, player position will be clamped, divided and turned into a intenger value so used to set texture frame. 
+// 
+// The value of player position is get in PlayerPosition, stored at $pos, $pos[2] are clamped, stored at $pos_rsv and this custom var is divided by $pos_max_y. After this turned into a intenger, and if the result its less from defined, the value is a float < 1 ( 0.83... ), if higher will be = or > 1 ( 1.25 etc... ) both values will turn into a int number, so or 1 or 0 on my teorical. And this is used to set the frame of animated texture in Int proxie ( resultVar "$frame" ).
+// 
+// Lower frame 0, higher 1. 
+// 
+// VMT Code:
 
 UnlitGeneric
 {
